@@ -24,7 +24,7 @@ def step_impl(context):
 
 @then("I should get an encoded message")
 def step_impl(context):
-    result = context.behave_driver.find_element(By.ID, "decoded_message").text
+    result = context.behave_driver.find_element(By.ID, "decoded_message").getText()
     assert result == "Vhfuhw Phvvdjh Wr Ghfrgh"
 
 @when("I enter an encoded message")
@@ -43,5 +43,5 @@ def step_impl(context):
 
 @then("then I should get a decoded message")
 def step_impl(context):
-    result = context.behave_driver.find_element(By.ID, "decoded_message").text
+    result = context.behave_driver.find_element(By.ID, "decoded_message").getText()
     assert result == "Secret Message To Decode"
