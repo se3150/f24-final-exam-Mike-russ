@@ -1,5 +1,6 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 import time
 
 @given('I open the url "https://www.hanginghyena.com/solvers_a/caesar-cipher-decoder"')
@@ -9,8 +10,8 @@ def step_impl(context):
 
 @when("when I enter a valid message")
 def step_impl(context):
-    type = context.behave_driver.find_element(By.ID, "decoder-setting")
-    shift = context.behave_driver.find_element(By.ID, "shift-amount")
+    type = Select(context.behave_driver.find_element(By.ID, "decoder-setting"))
+    shift = Select(context.behave_driver.find_element(By.ID, "shift-amount"))
     message = context.behave_driver.find_element(By.ID, "letters")
     submit_button = context.behave_driver.find_element(By.ID, "submit")
 
