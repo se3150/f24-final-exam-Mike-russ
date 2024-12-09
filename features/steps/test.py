@@ -15,8 +15,8 @@ def step_impl(context):
     submit_button = context.behave_driver.find_element(By.ID, "submit")
 
     # Enter values
-    type.select_by_index(0)
-    shift.select_by_index(4)
+    type.select_by_visible_text("Encode")
+    shift.type.select_by_visible_text("3")
     message.send_keys("Secret Message To Decode")
     submit_button.click()
     time.sleep(2)  # Wait for results to load
@@ -34,8 +34,8 @@ def step_impl(context):
     submit_button = context.behave_driver.find_element(By.ID, "submit")
 
     # Enter values
-    type.select_by_index(1)
-    shift.select_by_index(4)
+    type.select_by_visible_text("Decode")
+    shift.type.select_by_visible_text("3")
     message.send_keys("Vhfuhw Phvvdjh Wr Ghfrgh")
     submit_button.click()
     time.sleep(2)  # Wait for results to load
