@@ -17,7 +17,7 @@ def step_impl(context):
 
     # Enter values
     type.select_by_visible_text("Encode")
-    shift.type.select_by_visible_text("3")
+    shift.select_by_visible_text("3")
     message.send_keys("Secret Message To Decode")
     submit_button.click()
     time.sleep(2)  # Wait for results to load
@@ -29,8 +29,8 @@ def step_impl(context):
 
 @when("I enter an encoded message")
 def step_impl(context):
-    type = context.behave_driver.find_element(By.ID, "decoder-setting")
-    shift = context.behave_driver.find_element(By.ID, "shift-amount")
+    type = Select(context.behave_driver.find_element(By.ID, "decoder-setting"))
+    shift = Select(context.behave_driver.find_element(By.ID, "shift-amount"))
     message = context.behave_driver.find_element(By.ID, "letters")
     submit_button = context.behave_driver.find_element(By.ID, "submit")
 
