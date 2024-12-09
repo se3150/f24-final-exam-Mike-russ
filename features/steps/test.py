@@ -12,7 +12,7 @@ def step_impl(context):
     type = context.behave_driver.find_element(By.ID, "decoder-setting")
     shift = context.behave_driver.find_element(By.ID, "shift-amount")
     message = context.behave_driver.find_element(By.ID, "letters")
-    submit_button = context.behave_driver.find_element(By.CLASS_NAME, "submit")
+    submit_button = context.behave_driver.find_element(By.ID, "submit")
 
     # Enter values
     type.select_by_index(0)
@@ -31,7 +31,7 @@ def step_impl(context):
     type = context.behave_driver.find_element(By.ID, "decoder-setting")
     shift = context.behave_driver.find_element(By.ID, "shift-amount")
     message = context.behave_driver.find_element(By.ID, "letters")
-    submit_button = context.behave_driver.find_element(By.CLASS_NAME, "submit")
+    submit_button = context.behave_driver.find_element(By.ID, "submit")
 
     # Enter values
     type.select_by_index(1)
