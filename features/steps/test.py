@@ -36,7 +36,7 @@ def step_impl(context):
 
     # Enter values
     type.select_by_visible_text("Decode")
-    shift.type.select_by_visible_text("3")
+    shift.select_by_visible_text("3")
     message.send_keys("Vhfuhw Phvvdjh Wr Ghfrgh")
     submit_button.click()
     time.sleep(2)  # Wait for results to load
